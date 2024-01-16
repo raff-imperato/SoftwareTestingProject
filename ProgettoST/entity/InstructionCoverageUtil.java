@@ -17,6 +17,12 @@ public class InstructionCoverageUtil {
     {
         Scanner scan = new Scanner(System.in);
 
+        String JACOCO_PATH = "/home/raff/IdeaProjects/ProgettoSoftwareTesting/jacocoagent.jar";
+
+        String JACOCO_CLI_PATH = "/home/raff/IdeaProjects/ProgettoSoftwareTesting/jacococli.jar";
+
+        String JUNIT_PATH = "/usr/share/java/junit-platform-console-standalone.jar";
+
         int option = 0;
 
         while (option != 3) {
@@ -31,16 +37,7 @@ public class InstructionCoverageUtil {
 
             switch (option) {
                 case 1:
-                    System.out.println("Inserisci il percorso per il file .jar di Jacoco Agent: ");
-                    String JACOCO_PATH = scan.nextLine();
-
-                    System.out.println("Inserisci il percorso per il file .jar di Jacoco CLI: ");
-                    String JACOCO_CLI_PATH = scan.nextLine();
-
-                    System.out.println("Inserisci il percorso per il file .jar di JUnit: ");
-                    String JUNIT_PATH = scan.nextLine();
-
-                    System.out.println("Inserisci il percorso per il progetto: ");
+                    System.out.println("Inserisci il percorso per i file .class: ");
                     String CLASS_PATH = scan.nextLine();
 
                     System.out.println("Inserisci il percorso per la destinazione dei file di report: ");
@@ -153,7 +150,8 @@ public class InstructionCoverageUtil {
                     {
                         String elementName = columns.get(0).text();
                         String coveragePercentage = columns.get(2).text();
-                        DataTest temp = new DataTest(elementName, coveragePercentage, 0, classUT);
+                        double percentuale = Double.parseDouble(coveragePercentage.replaceAll("[^0-9]", ""));
+                        DataTest temp = new DataTest(elementName, percentuale, 0, classUT);
                         tests.add(temp);
                     }
 

@@ -2,7 +2,7 @@ package entity;
 
 public class DataTest {
     private String name;
-    private String instructionCoverage;
+    private double instructionCoverage;
     private float weakMutation;
     private String classUT;
     public String getName() {
@@ -11,10 +11,10 @@ public class DataTest {
     public void setName(String name) {
         this.name = name;
     }
-    public String getInstructionCoverage() {
+    public double getInstructionCoverage() {
         return instructionCoverage;
     }
-    public void setInstructionCoverage(String instructionCoverage) {
+    public void setInstructionCoverage(double instructionCoverage) {
         this.instructionCoverage = instructionCoverage;
     }
     public float getWeakMutation() {
@@ -30,7 +30,7 @@ public class DataTest {
         this.classUT = classUT;
     }
 
-    public DataTest(String name, String instructionCoverage, float weakMutation, String classUT) {
+    public DataTest(String name, double instructionCoverage, float weakMutation, String classUT) {
         this.name = name;
         this.instructionCoverage = instructionCoverage;
         this.weakMutation = weakMutation;
