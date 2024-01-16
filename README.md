@@ -19,8 +19,8 @@ Dall'analisi dei report sulla copertura, per ora soltanto ottenuta dalla metrica
 
 # Per il funzionamento
 
-Bisogna essere a disposizione della directory contenente i file .class della classe e delle classi di test (organizzati in cartelle possibilmente).
-Si genera un file .jar con il contenuto della directory citata nella riga precedente, il comando ubuntu utilizzato è il seguente:
+Bisogna avere a disposizione la directory contenente i file .class della classe e delle classi di test (organizzati in cartelle possibilmente).
+Si genera un file .jar con il contenuto della directory citata, il comando ubuntu utilizzato è il seguente:
 
 `jar cvf NomeClasseUnderTest.jar *`
 
@@ -34,7 +34,7 @@ Al programma vanno forniti i percorsi relativi a:
 
 - jacocoagent.jar
 - jacococli.jar
-- junit-platform-standalone.jar
+- junit-platform-console-standalone.jar
 - percorso del progetto contentente i .class e il file .jar contentente i .class (stessa directory)
 - percorso per il file di report index.html
 
