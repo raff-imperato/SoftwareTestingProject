@@ -13,7 +13,7 @@ Dall'analisi dei report sulla copertura, per ora soltanto ottenuta dalla metrica
 - Il sistema operativo utilizzato per sviluppare tale progetto è Ubuntu nella versione 22.04 LTS;
 - per Java è stata utilizzata la versione 21 del JDK;
 - per JUnit è stata utilizzata la versione 5;
-- come IDE è stato utilizzato IntelliJ Idea;
+- come IDE è stato utilizzato IntelliJ IDEA Community Edition;
 - sono stati scaricati dalla libreria di JaCoCo i file .jar di jacocoagent e jacococli;
 - inoltre è stata utilizzata la libreria di Jsoup che è stata aggiunta al classpath del progetto (utilizzata per leggere il file di report "index.html").
 
@@ -33,9 +33,16 @@ Al programma vanno forniti i percorsi relativi a:
 - jacococli.jar
 - junit-platform-console-standalone.jar
 - percorso del progetto contentente i .class
-- percorso per il file di report index.html
+- percorso per il file di report index.html (Se non esiste la directory essa verrà creata)
+
+Per quanto riguarda i primi tre, si modificano direttamente dalle variabili della classe, mentre gli altri due vengono forniti ogni volta in  input in quanto cambiano.
 
 # Esempio con video
+
+https://github.com/raff-imperato/SoftwareTestingProject/assets/115695791/289e23d5-1148-473b-b956-7bcb76d5874c
+
+
+
 
 
 
