@@ -20,9 +20,6 @@ Dall'analisi dei report sulla copertura, per ora soltanto ottenuta dalla metrica
 # Per il funzionamento
 
 Bisogna avere a disposizione la directory contenente i file .class della classe e delle classi di test (organizzati in cartelle possibilmente).
-Si genera un file .jar con il contenuto della directory citata, il comando ubuntu utilizzato è il seguente:
-
-`jar cvf NomeClasseUnderTest.jar *`
 
 Una volta fatto questo si può avviare il main di "InstructionCoverageUtil.java" che presenta un menù che consente di fare tre operazioni:
 
@@ -35,12 +32,11 @@ Al programma vanno forniti i percorsi relativi a:
 - jacocoagent.jar
 - jacococli.jar
 - junit-platform-console-standalone.jar
-- percorso del progetto contentente i .class e il file .jar contentente i .class (stessa directory)
+- percorso del progetto contentente i .class
 - percorso per il file di report index.html
 
 # Esempio con video
 
-https://github.com/raff-imperato/SoftwareTestingProject/assets/115695791/05acef24-1ac2-4c86-8822-1ee3518f9fb7
 
 
 
