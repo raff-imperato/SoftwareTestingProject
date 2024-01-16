@@ -22,7 +22,7 @@ Dall'analisi dei report sulla copertura, per ora soltanto ottenuta dalla metrica
 Bisogna essere a disposizione della directory contenente i file .class della classe e delle classi di test (organizzati in cartelle possibilmente).
 Si genera un file .jar con il contenuto della directory citata nella riga precedente, il comando ubuntu utilizzato è il seguente:
 
-'''jar cvf NomeClasseUnderTest.jar *'''
+`jar cvf NomeClasseUnderTest.jar *`
 
 Una volta fatto questo si può avviare il main di "InstructionCoverageUtil.java" che presenta un menù che consente di fare tre operazioni:
 
