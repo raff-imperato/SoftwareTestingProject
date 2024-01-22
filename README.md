@@ -1,51 +1,28 @@
-# Scopo del progetto
+# Precondizioni
+- Essere a disposizione dei file .java delle classi sotto test e delle classi di test
+- Scaricare i seguenti file:
 
-Lo scopo del progetto è di confrontare diverse classi di test. In particolare, per ogni classe si possono avere a disposizione:
+  1) evosuite-1.2.0.jar
+  2) evosuite-standalone-runtime-1.2.0.jar
 
-- da una a tre classi di test generate da Randoop;
-- da una a tre classi di test generate da Evosuite;
-- da una a quattro classi di test generate da studenti.
+- Avere maven installato
 
-Dall'analisi dei report sulla copertura, per ora soltanto ottenuta dalla metrica Instruction Coverage di JaCoCo, viene valutato se gli studenti si sono comportati meglio dei singoli test di Randoop o Evosuite.
+- Avere una versione di java 8
 
-# Configurazione
+- Quando vengono importati i file .java all'interno del progetto maven, bisogna seguire la seguente struttura, es.
 
-- Il sistema operativo utilizzato per sviluppare tale progetto è Ubuntu nella versione 22.04 LTS;
-- per Java è stata utilizzata la versione 21 del JDK;
-- per JUnit è stata utilizzata la versione 5;
-- come IDE è stato utilizzato IntelliJ IDEA Community Edition;
-- sono stati scaricati dalla libreria di JaCoCo i file .jar di jacocoagent e jacococli;
-- inoltre è stata utilizzata la libreria di Jsoup che è stata aggiunta al classpath del progetto (utilizzata per leggere il file di report "index.html").
+  ``src/main/java/ClassUnderTest/`` (per le classi sotto test)
+  ``src/test/java/[NomeClasseUnderTest]/[student; randoop; EvoSuiteTest]/[nomeCognomeX; level0X; Level0X]/`` (per le classi di test generate da studenti o dai robot)
 
-# Per il funzionamento
+- Bisogna fare attenzione al nome dei package presenti nelle classi di test (essi vengono importati e il nome andrà modificato con quello corretto)
 
-Bisogna avere a disposizione la directory contenente i file .class della classe e delle classi di test (organizzati in cartelle possibilmente).
+- Inoltre le classi di test devono importare correttamente la classe sotto test giusta
 
-Una volta fatto questo si può avviare il main di "InstructionCoverageUtil.java" che presenta un menù che consente di fare tre operazioni:
+# Guida all'uso 
+- Una volta importati i file .java nel progetto maven, la compilazione dovrebbe essere automatica (si può controllare se sono presenti i file .class appropiati all'interno di target/classes e target/test-classes). Se non sono presenti allora utilizzare il comando:
+  ```mvn compile```
 
-1) Eseguire e generare le coperture con JaCoCO;
-2) Visualizzare i risultati sotto forma di tabella;
-3) Uscire dal programma.
+- Far partire il main che assicura che ogni test suite presente sia eseguita, misurando in modo appropiato le metriche di line coverage e weak mutation di EvoSuite, organizzando i file contenenti i risultati in cartelle con nomi riconducibili al produttore della test suite.
 
-Al programma vanno forniti i percorsi relativi a:
-
-- jacocoagent.jar
-- jacococli.jar
-- junit-platform-console-standalone.jar
-- percorso del progetto contentente i .class
-- percorso per il file di report index.html (Se non esiste la directory essa verrà creata)
-
-Per quanto riguarda i primi tre, si modificano direttamente dalle variabili della classe, mentre gli altri due vengono forniti ogni volta in  input in quanto cambiano.
-
-# Esempio con video
-
-https://github.com/raff-imperato/SoftwareTestingProject/assets/115695791/289e23d5-1148-473b-b956-7bcb76d5874c
-
-
-
-
-
-
-
-
-
+# Limitazioni 
+- Putroppo EvoSuite non è ancora compatibile con i test scritti utilizzando JUnit 5, ma arriva fino a JUnit 4. Questo è stato un grande problema siccome gli studenti che hanno realizzato le test suite per le classi assegnate, hanno usato l'ultima versione di JUnit; al fine di fare un analisi per confrontare chi avesse prodotto test migliori tra studenti e robot, sono stati modificati pezzi di codice degli studenti.
