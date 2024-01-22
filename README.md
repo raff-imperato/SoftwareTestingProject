@@ -2,8 +2,8 @@
 - Essere a disposizione dei file .java delle classi sotto test e delle classi di test
 - Scaricare i seguenti file:
 
-  1) evosuite-1.2.0.jar
-  2) evosuite-standalone-runtime-1.2.0.jar
+  1. **evosuite-1.2.0.jar**
+  2. **evosuite-standalone-runtime-1.2.0.jar**
 
 - Avere maven installato
 
@@ -11,8 +11,8 @@
 
 - Quando vengono importati i file .java all'interno del progetto maven, bisogna seguire la seguente struttura, es.
 
-  ``src/main/java/ClassUnderTest/`` (per le classi sotto test)
-  ``src/test/java/[NomeClasseUnderTest]/[student; randoop; EvoSuiteTest]/[nomeCognomeX; level0X; Level0X]/`` (per le classi di test generate da studenti o dai robot)
+  - `src/main/java/ClassUnderTest/` (per le classi sotto test)
+  - `src/test/java/[NomeClasseUnderTest]/[student; randoop; EvoSuiteTest]/[nomeCognomeX; level0X; Level0X]/` (per le classi di test generate da studenti o dai robot)
 
 - Bisogna fare attenzione al nome dei package presenti nelle classi di test (essi vengono importati e il nome andrà modificato con quello corretto)
 
@@ -20,7 +20,7 @@
 
 # Guida all'uso 
 - Una volta importati i file .java nel progetto maven, la compilazione dovrebbe essere automatica (si può controllare se sono presenti i file .class appropiati all'interno di target/classes e target/test-classes). Se non sono presenti allora utilizzare il comando:
-  ```mvn compile```
+  `mvn compile`
 
 - Far partire il main che assicura che ogni test suite presente sia eseguita, misurando in modo appropiato le metriche di line coverage e weak mutation di EvoSuite, organizzando i file contenenti i risultati in cartelle con nomi riconducibili al produttore della test suite.
 
